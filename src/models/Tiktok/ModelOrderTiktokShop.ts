@@ -1,0 +1,84 @@
+export type IOrderTiktokShop = {
+  _id: string;
+  buyerEmail: string;
+  buyerMessage: string;
+  buyerName: string;
+  buyerPhone: string;
+  cancellationInitiator: string;
+  cancelTime: string;
+  createTime: Date;
+  deleveryMethod: string;
+  deliveryAddress: string;
+  deliveryDueTime: string;
+  deliveryTime: string;
+  deliveryType: string;
+  needUploadInvoice: string;
+  pageId: string;
+  payment: Payment;
+  paymentMethodName: string;
+  products: LineItem[];
+  sellerNote: string;
+  shippingProvider: string;
+  status: string;
+  trackingNumber: number;
+  updateTime: Date;
+};
+
+export type LineItem = {
+  buyer_service_fee: string;
+  cancel_reason: string;
+  cancel_user: string;
+  combined_listing_skus: {
+    product_id: string;
+    seller_sku: string;
+    sku_count: number;
+    sku_id: string;
+  }[];
+  currency: string;
+  display_status: string;
+  id: string;
+  is_gift: boolean;
+  item_tax: {
+    tax_amount: string;
+    tax_rate: string;
+    tax_type: string;
+  }[];
+  original_price: string;
+  package_id: string;
+  package_status: string;
+  platform_discount: string;
+  product_id: string;
+  product_name: string;
+  retail_delivery_fee: string;
+  rts_time: number;
+  sale_price: string;
+  seller_discount: string;
+  seller_sku: string;
+  shipping_provider_id: string;
+  shipping_provider_name: string;
+  sku_id: string;
+  sku_image: string;
+  sku_name: string;
+  sku_type: string;
+  small_order_fee: string;
+  tracking_number: string;
+};
+
+export type Payment = {
+  buyer_service_fee: string;
+  currency: string;
+  original_shipping_fee: string;
+  original_total_product_price: string;
+  platform_discount: string;
+  product_tax: string;
+  retail_delivery_fee: string;
+  seller_discount: string;
+  shipping_fee: string;
+  shipping_fee_platform_discount: string;
+  shipping_fee_seller_discount: string;
+  shipping_fee_tax: string;
+  small_order_fee: string;
+  sub_total: string;
+  tax: string;
+  total_amount: string;
+};

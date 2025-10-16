@@ -1,0 +1,29 @@
+{
+  "extends": "expo/tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["react-native", "node"],
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "noUnusedLocals": true,
+    "jsx": "react-jsx",
+    "module": "ESNext", // Đảm bảo là "ESNext" hoặc "ES6"
+    "target": "ES6", // Hoặc "ESNext" tùy thuộc vào môi trường bạn đang chạy
+    "strict": true, // Bật chế độ strict, bao gồm cả `strictNullChecks`
+    "esModuleInterop": true, // Giúp sử dụng import dễ dàng hơn với các module CommonJS
+    "moduleResolution": "node",
+    "skipLibCheck": true
+  },
+  "include": [
+    "tests/**/*",
+    "./src/**/*",
+    "index.d.ts",
+    "*.mjs",
+    ".*.mjs",
+    "*.js",
+    ".*.js",
+    "*.ts",
+    ".prettierrc.mjs"
+  ],
+  "exclude": ["node_modules", "_", "android", "ios"]
+}
